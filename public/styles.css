@@ -1,0 +1,146 @@
+/*
+  Name: Fengyi Sun and Yi Shi
+  Date: May 4, 2024
+  Section: CSE 154 AC and CSE 154 AG
+  This is the styles.css and it modifies styles of our course enrollment website.
+*/
+
+body {
+  margin: 2%;
+}
+
+/* font */
+h1 {
+  font-family: "Crete Round", serif;
+  font-size: 38px;
+}
+
+main {
+  display: flex;
+  align-items: top;
+}
+
+aside {
+  background-color: rgba(100, 148, 237, 0.267);
+  padding: 10px;
+  display: flex;
+  flex-direction: column;
+}
+
+aside h2 {
+  color: #5f6565;
+  font-size: 20px;
+}
+
+button {
+  margin: 10px;
+  cursor: pointer;
+  padding: 5px 10px;
+  border-radius: 6px;
+  border: 1px solid #d5d3d3;
+}
+
+button:hover {
+  background-color: #919193;
+  color: white;
+}
+
+input {
+  padding: 8px 10px;
+  font-size: 16px;
+}
+
+article {
+  margin-left: 1%;
+  width: 80%;
+  border: 2px solid #1e1c1b42;
+  padding: 20px;
+  margin-right: auto;
+}
+
+/* home view style */
+#filter {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+}
+
+#filter form {
+  padding: 30px;
+}
+
+#courses-container {
+  border-top: 2px solid #1e1c1b42;
+  margin-top: 5px;
+}
+
+#courses-container h2:hover {
+  color: #8a8585;
+  cursor: pointer;
+}
+
+.grid-view {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+}
+
+.grid-view section {
+  width: 100px;
+  font-size: 8px;
+}
+
+.course-card {
+  background-image: linear-gradient(rgba(198, 195, 195, 0.564), rgba(239, 239, 236, 0));
+  margin: 10px;
+  border: solid 2px rgba(0, 0, 0, 0.522);
+  border-radius: 4px;
+  padding-left: 20px;
+  padding-right: 30px;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+}
+
+/* login view style */
+#login form {
+  display: flex;
+  flex-direction: column;
+  margin-left: auto;
+  margin-right: auto;
+  width: 60%;
+  border: 2px solid #1e1c1b;
+  padding: 40px;
+  align-items: end;
+}
+
+#login form > div {
+  padding: 10px;
+  display: flex;
+  justify-content: center;
+  align-items: start;
+}
+
+#login form label {
+  font-size: 16px;
+  padding-right: 16px;
+}
+
+/* account view style */
+#account div {
+  border: 2px solid #1e1c1b;
+  margin: 10px;
+  padding: 10px;
+}
+
+#account h3 {
+  text-align: center;
+}
+
+#account ul {
+  color: rebeccapurple;
+}
+
+.hidden {
+  display: none;
+}

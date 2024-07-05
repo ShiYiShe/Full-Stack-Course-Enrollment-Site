@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<!--
+  Name: Fengyi Sun and Yi Shi
+  Date: May 4, 2024
+  Section: CSE 154 AC and CSE 154 AG
+  This is the index.html of our course enrollment website.
+  It includes basic structures of viewing and searching courses.
+  To do: Click "More Info" button to toggle between show and hide info.
+-->
+<html lang="en">
+
+<head>
+  <meta charset='utf-8'>
+  <title>Course Enrollment</title>
+  <link rel="stylesheet" href="./styles.css">
+  <link href="https://fonts.googleapis.com/css2?family=Crete+Round:ital@0;1&display=swap" rel="stylesheet">
+  <script src="./index.js"></script>
+</head>
+
+<body>
+  <h1>Course Enrollment</h1>
+  <p id="notification"></p>
+  <main>
+    <aside>
+      <h2 id="my-account">My Account</h2>
+      <button id="login-btn">Login</button>
+      <button id="find-btn">Find Course</button>
+      <button id="enrollment-btn">Enrollment</button>
+      <button id="logout-btn">Logout</button>
+    </aside>
+    <article>
+      <!-- home view -->
+      <section id="home">
+        <div id="search">
+          <input id="search-input" type="text">
+          <button id="search-btn">search</button>
+          <button id="all">back to all</button>
+        </div>
+        <div id="filter">
+          <form>
+            <h3>Department</h3>
+            <input type="checkbox" id="cse" name="department" value="CSE">
+            <label for="cse">CSE</label><br>
+            <input type="checkbox" id="info" name="department" value="INFO">
+            <label for="info">INFO</label><br>
+          </form>
+          <form>
+            <h3>Credit</h3>
+            <input type="checkbox" id="four-credit" name="credit" value="4">
+            <label for="four-credit">4</label><br>
+            <input type="checkbox" id="five-credit" name="credit" value="5">
+            <label for="five-credit">5</label><br>
+          </form>
+          <form>
+            <h3>Availability</h3>
+            <input type="checkbox" id="full" name="spot" value="4">
+            <label for="full">Full</label><br>
+            <input type="checkbox" id="not-full" name="spot" value="5">
+            <label for="not-full">Not Full</label><br>
+          </form>
+          <button id="apply-btn">Apply</button>
+        </div>
+        <div id="toggle-view">
+          <button id="list-btn">List</button>
+          <button id="grid-btn">Card</button>
+        </div>
+
+        <div id="courses-container" class="grid-view">
+        <!-- courses display here -->
+          <h3 id="fetch-err"></h3>
+        </div>
+      </section>
+
+      <!-- login view -->
+      <section id="login" class="hidden">
+        <form id="login-form">
+          <div>
+            <label for='email'>Email:</label>
+            <input type='text' id='email' name='email' required autocomplete="off">
+          </div>
+          <div>
+            <label for='password'>Password:</label>
+            <input type='text' id='password' name='password' required>
+          </div>
+          <button>submit</button>
+        </form>
+      </section>
+
+      <!-- account view -->
+      <section id="account" class="hidden">
+        <div id="completed">
+          <h3>Completed courses</h3>
+          <ul>
+            <li>CSE142(example)</li>
+          </ul>
+        </div>
+
+        <div id="enrolled">
+          <h3>Current enrolled courses</h3>
+          <ul>
+            <li>CSE142(example)</li>
+          </ul>
+        </div>
+
+        <div id="waitinglist">
+          <h3>Courses on waitinglist</h3>
+          <ul>
+            <li>CSE142(example)</li>
+          </ul>
+        </div>
+      </section>
+
+      <!-- Error View -->
+      <section id="error" class="hidden">
+        <p id="err-msg"></p>
+      </section>
+
+    </article>
+  </main>
+  <footer>
+    <p>CSE154 Final Project: Fengyi Sun and Yi Shi</p>
+  </footer>
+</body>
+
+</html>
